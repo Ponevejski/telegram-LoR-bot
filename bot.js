@@ -29,7 +29,7 @@ const Legolas = {
   Name: 'Legolas',
   Race: 'Sindar Elf',
   Photo:
-    'https://static.wikia.nocookie.net/lotr/images/5/5e/Legolas_The_Hobbit.jpg/revision/latest/scale-to-width-down/340?cb=20121117114948',
+    'https://www.slashfilm.com/wp/wp-content/images/Hobbit-Smaug-Poster-Legolas-header.jpg',
   URL: 'https://en.wikipedia.org/wiki/Legolas',
 };
 const Gimli = {
