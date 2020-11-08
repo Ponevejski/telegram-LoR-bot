@@ -28,8 +28,7 @@ const Frodo = {
 const Legolas = {
   Name: 'Legolas',
   Race: 'Sindar Elf',
-  Photo:
-    'https://www.slashfilm.com/wp/wp-content/images/Hobbit-Smaug-Poster-Legolas-header.jpg',
+  Photo: 'https://www.slashfilm.com/wp/wp-content/images/Hobbit-Smaug-Poster-Legolas-header.jpg',
   URL: 'https://en.wikipedia.org/wiki/Legolas',
 };
 const Gimli = {
@@ -43,17 +42,23 @@ const bot = new Telegraf(process.env.ness);
 const Markup = require('telegraf/markup');
 bot.start((ctx) =>
   ctx.reply(
-    `Hello, ${ctx.message.from.first_name}`,
-    Markup.keyboard([['/gandalf', '/aragorn', '/frodo', '/legolas', '/gimli']])
-      .resize()
-      .extra()
+    `Greetings, ${ctx.message.from.first_name}!😀
+
+This is a LoR characters INFO - BOT. 
+Use command /help to see all the information.`
   )
 );
 bot.help((ctx) =>
   ctx.reply(
     `${
       ctx.message.from.first_name
-    }, you can find inforamtion about LoR universe here : ${'https://en.wikipedia.org/wiki/Category:The_Lord_of_the_Rings_characters'}`
+    }, you can find inforamtion about LoR universe by tapping this link : ${'https://en.wikipedia.org/wiki/Category:The_Lord_of_the_Rings_characters'}
+  
+  
+    Or you can take a view on some characters by pressing bottom-buttons menu`,
+    Markup.keyboard([['/gandalf', '/aragorn', '/frodo', '/legolas', '/gimli']])
+      .resize()
+      .extra()
   )
 );
 bot.on('sticker', (ctx) => ctx.reply('👍'));
